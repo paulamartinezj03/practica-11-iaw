@@ -8,3 +8,7 @@ apt update -y
 apt install nfs-common -y
 #Montaje del cliente
 sudo mount $IP_NFS:/var/www/html /var/www/html
+#Configuramos el archivo /etc/fstab
+cp ../nfs/fstab /etc/fstab
+#Añadimos una nueva linea al /etc/fstab con el punto de montaje del NFS Server
+$IP_NFS/var/www/html /var/www/html  nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
