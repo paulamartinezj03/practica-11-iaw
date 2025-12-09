@@ -7,4 +7,4 @@ apt update -y
 #Instalamos el servicio de NFS-Server cliente
 apt install nfs-common -y
 #Montaje del cliente
-sudo mount $NFS_IP:/var/www/html /var/www/html
+sudo mount $IP_NFS:/var/www/html /var/www/html
