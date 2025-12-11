@@ -22,7 +22,7 @@ wp config create \
   --dbname=$DB_NAME \
   --dbuser=$DB_USER \
   --dbpass=$DB_PASSWORD \
-  --dbhost=$DBHOST \
+  --dbhost=$DB_HOST \
   --path=/var/www/html \
   --allow-root
 #Instalamos wordpress
