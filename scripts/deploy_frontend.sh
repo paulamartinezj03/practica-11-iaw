@@ -27,11 +27,11 @@ wp config create \
   --allow-root
 #Instalamos wordpress
 wp core install \
-  --url=$CERTBOTDOMAIN \
-  --title="$WORDPRESSTITLE" \
-  --admin_user=$WORDPRESSADMINUSER \
-  --admin_password=$WORDPRESSADMINPASSWORD \
-  --admin_email=$CERTBOTEMAIL \
+  --url=$CERTBOT_DOMAIN \
+  --title="$WORDPRESS_TITLE" \
+  --admin_user=$WORDPRESS_ADMIN_USER \
+  --admin_password=$WORDPRESS_ADMIN_PASSWORD \
+  --admin_email=$CERTBOT_EMAIL \
   --path=/var/www/html \
   --allow-root  
 
