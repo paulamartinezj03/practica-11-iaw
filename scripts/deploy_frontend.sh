@@ -55,5 +55,8 @@ wp theme install astra --activate \
 #Copiamos el archivo .htaccess personalizado
 cp ../htaccess/.htaccess /var/www/html/
 
+#Añadimos la variable $_SERVER['HTTPS'] = 'on';
+sed -i "/DB_COLLATE/a \$_SERVER\['HTTPS'\] = 'on';" /var/www/html/wp-config.php
+
 #Modificamos el propietario y el grupo de /var/www/html a www-data
 chown -R www-data:www-data /var/www/html
